@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "satoshi";
+    src: url("../src/assets/Satoshi-Regular.otf");
+}
+
+*{
+    font-family: "satoshi";
+}
+
+.shadow-left::before, .shadow-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .shadow-left::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.407));
+    filter: blur(10px); 
+  }
+  
+  .shadow-right::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.773), rgba(0, 0, 0, 0.384));
+    filter: blur(10px); 
+  }
+  
